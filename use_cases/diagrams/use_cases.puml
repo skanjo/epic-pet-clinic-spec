@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+actor Staff
+rectangle "Owner" {
+    (Add Owner) as AddOwner
+    (View Owner) as ViewOwner
+    (Update Owner) as UpdateOwner
+    (Search for Owner) as SearchOwner
+    Staff --> AddOwner
+    Staff --> ViewOwner
+    Staff --> UpdateOwner
+    Staff --> SearchOwner
+}
+rectangle "Pet" {
+    (Add Pet to Owner) as AddPet
+    (Update Pet of Owner) as UpdatePet
+    Staff --> AddPet
+    Staff --> UpdatePet
+}
+rectangle "Visit" {
+    (Add Visit for Pet) as AddVisit
+    Staff --> AddVisit
+}
+rectangle "Veterinarian" {
+    (Search for Vets) as SearchVets
+    Staff --> SearchVets
+}
+@enduml
